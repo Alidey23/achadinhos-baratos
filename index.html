@@ -4,59 +4,91 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vitrine de Ofertas</title>
+  <meta name="description" content="Vitrine de produtos da Shopee e Mercado Livre com links oficiais de afiliado." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="header">
     <div class="container nav">
-      <div class="logo">
+      <a class="logo" href="#inicio" aria-label="Ir para início">
         <span class="logo-mark">V</span>
-        <div>
-          <h1>Vitrine de Ofertas</h1>
-          <p>Produtos com links oficiais</p>
-        </div>
-      </div>
+        <span class="logo-text">
+          <strong>Vitrine de Ofertas</strong>
+          <small>Produtos com links oficiais</small>
+        </span>
+      </a>
 
-      <nav>
-        <a href="#inicio">Início</a>
+      <nav class="menu">
         <a href="#produtos">Produtos</a>
         <a href="#como-funciona">Como funciona</a>
+        <a href="#faq">FAQ</a>
         <a href="#contato">Contato</a>
       </nav>
+
+      <a class="btn btn-primary header-btn" href="#produtos">Ver ofertas</a>
     </div>
   </header>
 
   <main>
     <section class="hero" id="inicio">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <span class="badge">Afiliados • Shopee • Mercado Livre</span>
-          <h2>Encontre produtos incríveis com compra rápida e segura.</h2>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="pill">Afiliados • Shopee • Mercado Livre</span>
+          <h1>Encontre produtos em destaque com compra rápida e segura.</h1>
           <p>
-            Nosso site é apenas uma vitrine. Você vê os produtos aqui e, ao clicar em
-            <strong>Comprar</strong>, será redirecionado para o site oficial para concluir a compra.
+            Este site é uma vitrine de afiliados. Você escolhe o produto aqui e
+            finaliza a compra diretamente no site oficial do vendedor.
           </p>
-          <a href="#produtos" class="btn btn-primary">Ver produtos</a>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#produtos">Explorar produtos</a>
+            <a class="btn btn-ghost" href="#como-funciona">Como funciona</a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <strong>100%</strong>
+              <span>conteúdo editável</span>
+            </div>
+            <div>
+              <strong>2 marketplaces</strong>
+              <span>Shopee e Mercado Livre</span>
+            </div>
+            <div>
+              <strong>Sem checkout</strong>
+              <span>compra no link oficial</span>
+            </div>
+          </div>
         </div>
 
         <div class="hero-card">
           <img
-            src="https://via.placeholder.com/600x500.png?text=Imagem+de+Produto"
+            src="https://via.placeholder.com/900x720.png?text=Imagem+em+destaque"
             alt="Produto em destaque"
           />
         </div>
       </div>
     </section>
 
-    <section class="categories">
+    <section class="search-section">
       <div class="container">
-        <h3>Categorias em destaque</h3>
-        <div class="category-list">
-          <button class="category-btn active" data-category="all">Todos</button>
-          <button class="category-btn" data-category="casa">Casa</button>
-          <button class="category-btn" data-category="moda">Moda</button>
-          <button class="category-btn" data-category="tecnologia">Tecnologia</button>
-          <button class="category-btn" data-category="beleza">Beleza</button>
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Pesquisar produto por nome..."
+            aria-label="Pesquisar produto"
+          />
+          <button id="clearSearch" class="btn btn-secondary" type="button">Limpar</button>
+        </div>
+
+        <div class="filters" aria-label="Filtros de categoria">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="casa">Casa</button>
+          <button class="filter-btn" data-filter="moda">Moda</button>
+          <button class="filter-btn" data-filter="tecnologia">Tecnologia</button>
+          <button class="filter-btn" data-filter="beleza">Beleza</button>
+          <button class="filter-btn" data-filter="melhor-avaliados">Melhor avaliados</button>
         </div>
       </div>
     </section>
@@ -64,110 +96,108 @@
     <section class="products-section" id="produtos">
       <div class="container">
         <div class="section-title">
-          <h3>Produtos em oferta</h3>
-          <p>Exemplo de vitrine com cartões fáceis de duplicar.</p>
+          <h2>Produtos em destaque</h2>
+          <p>Troque os títulos, preços, imagens e links direto no arquivo <code>script.js</code>.</p>
         </div>
 
-        <div class="products-grid" id="productsGrid">
-          <article class="product-card" data-category="tecnologia">
-            <img src="https://via.placeholder.com/400x320.png?text=Produto+1" alt="Produto 1" />
-            <div class="product-info">
-              <h4>Fone Bluetooth Premium</h4>
-              <p class="price">R$ 89,90</p>
-              <p class="rating">⭐ 4,8 • 1.240 avaliações</p>
-              <a href="https://shopee.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Comprar</a>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="casa">
-            <img src="https://via.placeholder.com/400x320.png?text=Produto+2" alt="Produto 2" />
-            <div class="product-info">
-              <h4>Luminária Decorativa LED</h4>
-              <p class="price">R$ 59,90</p>
-              <p class="rating">⭐ 4,7 • 860 avaliações</p>
-              <a href="https://mercadolivre.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Comprar</a>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="moda">
-            <img src="https://via.placeholder.com/400x320.png?text=Produto+3" alt="Produto 3" />
-            <div class="product-info">
-              <h4>Bolsa Feminina Casual</h4>
-              <p class="price">R$ 74,90</p>
-              <p class="rating">⭐ 4,9 • 2.015 avaliações</p>
-              <a href="https://shopee.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Comprar</a>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="beleza">
-            <img src="https://via.placeholder.com/400x320.png?text=Produto+4" alt="Produto 4" />
-            <div class="product-info">
-              <h4>Kit Skincare Completo</h4>
-              <p class="price">R$ 119,90</p>
-              <p class="rating">⭐ 4,8 • 540 avaliações</p>
-              <a href="https://mercadolivre.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Comprar</a>
-            </div>
-          </article>
-        </div>
+        <div class="products-grid" id="productsGrid"></div>
       </div>
     </section>
 
-    <section class="how-it-works" id="como-funciona">
+    <section class="info-section" id="como-funciona">
       <div class="container">
         <div class="section-title">
-          <h3>Como funciona</h3>
+          <h2>Como funciona</h2>
+          <p>Uma experiência simples, rápida e transparente.</p>
         </div>
 
         <div class="steps">
-          <div class="step">
+          <article class="step">
             <span>1</span>
-            <h4>Você navega no site</h4>
-            <p>Veja os produtos, imagens, preços e avaliações.</p>
-          </div>
-          <div class="step">
+            <h3>Você navega pelos produtos</h3>
+            <p>Veja imagens, preços, avaliações e a loja de origem.</p>
+          </article>
+
+          <article class="step">
             <span>2</span>
-            <h4>Clica em Comprar</h4>
-            <p>O botão leva você para a página oficial do produto.</p>
-          </div>
-          <div class="step">
+            <h3>Clica em “Comprar”</h3>
+            <p>O botão abre a página oficial do produto em outra aba.</p>
+          </article>
+
+          <article class="step">
             <span>3</span>
-            <h4>Finaliza na plataforma parceira</h4>
-            <p>A compra acontece diretamente na Shopee ou Mercado Livre.</p>
-          </div>
+            <h3>Conclui a compra na plataforma</h3>
+            <p>O pagamento acontece no site da Shopee ou do Mercado Livre.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="disclaimer">
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-title">
+          <h2>Perguntas frequentes</h2>
+          <p>Respostas curtas para deixar o site mais confiável.</p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Esse site vende os produtos diretamente?</summary>
+            <p>Não. Ele funciona apenas como vitrine e direciona para o site oficial do produto.</p>
+          </details>
+
+          <details>
+            <summary>Onde a compra é finalizada?</summary>
+            <p>A compra é finalizada na Shopee ou no Mercado Livre, dependendo do produto.</p>
+          </details>
+
+          <details>
+            <summary>Os links são seguros?</summary>
+            <p>Sim. Os botões devem apontar para páginas oficiais da marketplace ou do vendedor.</p>
+          </details>
+
+          <details>
+            <summary>O site ganha comissão?</summary>
+            <p>Sim, o site pode receber comissão de afiliado sem custo extra para o comprador.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="transparency">
       <div class="container">
         <p>
-          Este site participa de programas de afiliados e pode receber comissão por compras realizadas
-          pelos links, sem custo adicional para o comprador.
+          Aviso: este é um site de afiliados. Podemos receber comissão por compras feitas pelos links,
+          sem custo adicional para você.
         </p>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="contato">
-    <div class="container footer-content">
+    <div class="container footer-grid">
       <div>
-        <h4>Vitrine de Ofertas</h4>
-        <p>Seu catálogo de produtos com links oficiais.</p>
+        <h3>Vitrine de Ofertas</h3>
+        <p>Catálogo de produtos com links oficiais e experiência simples para o usuário.</p>
       </div>
 
       <div>
-        <h4>Contato</h4>
-        <p>email@seudominio.com</p>
+        <h3>Contato</h3>
+        <p>contato@seudominio.com</p>
         <p>@seudominio</p>
       </div>
 
       <div>
-        <h4>Legal</h4>
+        <h3>Legal</h3>
         <p>Termos de uso</p>
         <p>Política de privacidade</p>
       </div>
     </div>
   </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
+    WhatsApp
+  </a>
 
   <script src="script.js"></script>
 </body>
